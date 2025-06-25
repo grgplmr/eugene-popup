@@ -1,0 +1,5 @@
+/* Admin styles for PopMagique */
+.popmagique-admin .tab-content { display: none; }
+.popmagique-admin .tab-content.active { display: block; }
+.popmagique-admin .popmagique-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.popmagique-admin .popmagique-actions { display: flex; gap: 10px; }
