@@ -30,14 +30,9 @@ if (!defined('ABSPATH')) {
             <div class="popmagique-content">
                 <?php if (!empty($options['entry_popup']['image_url'])): ?>
                 <div class="popmagique-image">
-                    <img src="<?php echo esc_url($options['entry_popup']['image_url']); ?>" 
-                         alt="<?php echo esc_attr($options['entry_popup']['title']); ?>">
+                    <img src="<?php echo esc_url($options['entry_popup']['image_url']); ?>" alt="">
                 </div>
                 <?php endif; ?>
-                
-                <h2 class="popmagique-title">
-                    <?php echo esc_html($options['entry_popup']['title']); ?>
-                </h2>
                 
                 <p class="popmagique-text">
                     <?php echo wp_kses_post($options['entry_popup']['content']); ?>
@@ -70,10 +65,6 @@ if (!defined('ABSPATH')) {
             </button>
             
             <div class="popmagique-content">
-                <h2 class="popmagique-title">
-                    <?php echo esc_html($options['exit_popup']['title']); ?>
-                </h2>
-
                 <p class="popmagique-text">
                     <?php echo wp_kses_post($options['exit_popup']['content']); ?>
                 </p>
