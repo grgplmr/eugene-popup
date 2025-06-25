@@ -54,7 +54,13 @@ if (!defined('ABSPATH')) {
                         <tr>
                             <th scope="row">Contenu</th>
                             <td>
-                                <textarea name="entry_popup[content]" rows="4" class="large-text"><?php echo esc_textarea($options['entry_popup']['content']); ?></textarea>
+                                <?php
+                                wp_editor(
+                                    wp_kses_post($options['entry_popup']['content']),
+                                    'entry_popup_content',
+                                    array('textarea_name' => 'entry_popup[content]')
+                                );
+                                ?>
                             </td>
                         </tr>
                         <tr>
@@ -187,7 +193,13 @@ if (!defined('ABSPATH')) {
                         <tr>
                             <th scope="row">Contenu</th>
                             <td>
-                                <textarea name="exit_popup[content]" rows="4" class="large-text"><?php echo esc_textarea($options['exit_popup']['content']); ?></textarea>
+                                <?php
+                                wp_editor(
+                                    wp_kses_post($options['exit_popup']['content']),
+                                    'exit_popup_content',
+                                    array('textarea_name' => 'exit_popup[content]')
+                                );
+                                ?>
                             </td>
                         </tr>
                         <tr>
