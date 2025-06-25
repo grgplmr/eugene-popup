@@ -18,7 +18,8 @@ if (!defined('ABSPATH')) {
                     font-weight: <?php echo esc_attr($options['entry_popup']['font_weight']); ?>;
                     font-style: <?php echo esc_attr($options['entry_popup']['font_style']); ?>;
                     text-transform: <?php echo esc_attr($options['entry_popup']['text_transform']); ?>;
-                    text-align: <?php echo esc_attr($options['entry_popup']['text_align']); ?>;">
+                    text-align: <?php echo esc_attr($options['entry_popup']['text_align']); ?>;
+                    max-width: <?php echo isset($options['entry_popup']['width']) ? intval($options['entry_popup']['width']) : 500; ?>px;">
             
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -55,7 +56,8 @@ if (!defined('ABSPATH')) {
                     font-weight: <?php echo esc_attr($options['exit_popup']['font_weight']); ?>;
                     font-style: <?php echo esc_attr($options['exit_popup']['font_style']); ?>;
                     text-transform: <?php echo esc_attr($options['exit_popup']['text_transform']); ?>;
-                    text-align: <?php echo esc_attr($options['exit_popup']['text_align']); ?>;">
+                    text-align: <?php echo esc_attr($options['exit_popup']['text_align']); ?>;
+                    max-width: <?php echo isset($options['exit_popup']['width']) ? intval($options['exit_popup']['width']) : 500; ?>px;">
             
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

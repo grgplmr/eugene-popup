@@ -51,7 +51,8 @@ class PopMagique {
             'font_style' => 'normal',
             'text_transform' => 'none',
             'text_align' => 'center',
-            'image_url' => ''
+            'image_url' => '',
+            'width' => 500
         ),
         'exit_popup' => array(
             'enabled' => true,
@@ -66,7 +67,8 @@ class PopMagique {
             'font_weight' => 'normal',
             'font_style' => 'normal',
             'text_transform' => 'none',
-            'text_align' => 'center'
+            'text_align' => 'center',
+            'width' => 500
         )
     );
     
@@ -367,7 +369,8 @@ class PopMagique {
             'font_style' => in_array($settings['entry_popup']['font_style'], array('normal', 'italic'), true) ? $settings['entry_popup']['font_style'] : 'normal',
             'text_transform' => in_array($settings['entry_popup']['text_transform'], array('none', 'uppercase', 'lowercase', 'capitalize'), true) ? $settings['entry_popup']['text_transform'] : 'none',
             'text_align' => in_array($settings['entry_popup']['text_align'], array('left', 'center', 'right'), true) ? $settings['entry_popup']['text_align'] : 'center',
-            'image_url' => esc_url_raw($settings['entry_popup']['image_url'])
+            'image_url' => esc_url_raw($settings['entry_popup']['image_url']),
+            'width' => absint($settings['entry_popup']['width'])
         );
         
         // Popup de sortie
@@ -384,7 +387,8 @@ class PopMagique {
             'font_weight' => in_array($settings['exit_popup']['font_weight'], array('normal', 'bold'), true) ? $settings['exit_popup']['font_weight'] : 'normal',
             'font_style' => in_array($settings['exit_popup']['font_style'], array('normal', 'italic'), true) ? $settings['exit_popup']['font_style'] : 'normal',
             'text_transform' => in_array($settings['exit_popup']['text_transform'], array('none', 'uppercase', 'lowercase', 'capitalize'), true) ? $settings['exit_popup']['text_transform'] : 'none',
-            'text_align' => in_array($settings['exit_popup']['text_align'], array('left', 'center', 'right'), true) ? $settings['exit_popup']['text_align'] : 'center'
+            'text_align' => in_array($settings['exit_popup']['text_align'], array('left', 'center', 'right'), true) ? $settings['exit_popup']['text_align'] : 'center',
+            'width' => absint($settings['exit_popup']['width'])
         );
         
         return $clean;
