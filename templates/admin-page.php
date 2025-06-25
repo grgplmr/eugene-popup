@@ -133,6 +133,38 @@ if (!defined('ABSPATH')) {
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                            <th scope="row">Graisse de police</th>
+                            <td>
+                                <select name="entry_popup[font_weight]">
+                                    <option value="normal" <?php selected($options['entry_popup']['font_weight'], 'normal'); ?>>Normal</option>
+                                    <option value="bold" <?php selected($options['entry_popup']['font_weight'], 'bold'); ?>>Gras</option>
+                                </select>
+                                <p class="description">Épaisseur du texte du popup</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Style de police</th>
+                            <td>
+                                <select name="entry_popup[font_style]">
+                                    <option value="normal" <?php selected($options['entry_popup']['font_style'], 'normal'); ?>>Normal</option>
+                                    <option value="italic" <?php selected($options['entry_popup']['font_style'], 'italic'); ?>>Italique</option>
+                                </select>
+                                <p class="description">Style du texte du popup</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Transformation du texte</th>
+                            <td>
+                                <select name="entry_popup[text_transform]">
+                                    <option value="none" <?php selected($options['entry_popup']['text_transform'], 'none'); ?>>Aucune</option>
+                                    <option value="uppercase" <?php selected($options['entry_popup']['text_transform'], 'uppercase'); ?>>MAJUSCULES</option>
+                                    <option value="lowercase" <?php selected($options['entry_popup']['text_transform'], 'lowercase'); ?>>minuscules</option>
+                                    <option value="capitalize" <?php selected($options['entry_popup']['text_transform'], 'capitalize'); ?>>Capitalize</option>
+                                </select>
+                                <p class="description">Transformation appliquée au texte</p>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -208,6 +240,38 @@ if (!defined('ABSPATH')) {
                                     <option value="Georgia, serif" <?php selected($options['exit_popup']['font_family'], 'Georgia, serif'); ?>>Georgia</option>
                                     <option value="'Times New Roman', serif" <?php selected($options['exit_popup']['font_family'], "'Times New Roman', serif"); ?>>Times New Roman</option>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Graisse de police</th>
+                            <td>
+                                <select name="exit_popup[font_weight]">
+                                    <option value="normal" <?php selected($options['exit_popup']['font_weight'], 'normal'); ?>>Normal</option>
+                                    <option value="bold" <?php selected($options['exit_popup']['font_weight'], 'bold'); ?>>Gras</option>
+                                </select>
+                                <p class="description">Épaisseur du texte du popup</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Style de police</th>
+                            <td>
+                                <select name="exit_popup[font_style]">
+                                    <option value="normal" <?php selected($options['exit_popup']['font_style'], 'normal'); ?>>Normal</option>
+                                    <option value="italic" <?php selected($options['exit_popup']['font_style'], 'italic'); ?>>Italique</option>
+                                </select>
+                                <p class="description">Style du texte du popup</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Transformation du texte</th>
+                            <td>
+                                <select name="exit_popup[text_transform]">
+                                    <option value="none" <?php selected($options['exit_popup']['text_transform'], 'none'); ?>>Aucune</option>
+                                    <option value="uppercase" <?php selected($options['exit_popup']['text_transform'], 'uppercase'); ?>>MAJUSCULES</option>
+                                    <option value="lowercase" <?php selected($options['exit_popup']['text_transform'], 'lowercase'); ?>>minuscules</option>
+                                    <option value="capitalize" <?php selected($options['exit_popup']['text_transform'], 'capitalize'); ?>>Capitalize</option>
+                                </select>
+                                <p class="description">Transformation appliquée au texte</p>
                             </td>
                         </tr>
                     </table>

@@ -10,11 +10,14 @@ if (!defined('ABSPATH')) {
     <?php if ($options['entry_popup']['enabled']): ?>
     <div id="popmagique-entry-popup" class="popmagique-popup" style="display: none;">
         <div class="popmagique-backdrop"></div>
-        <div class="popmagique-modal popmagique-entry-modal" 
-             style="background: <?php echo esc_attr($options['entry_popup']['background_color']); ?>; 
+        <div class="popmagique-modal popmagique-entry-modal"
+             style="background: <?php echo esc_attr($options['entry_popup']['background_color']); ?>;
                     color: <?php echo esc_attr($options['entry_popup']['text_color']); ?>;
                     font-family: <?php echo esc_attr($options['entry_popup']['font_family']); ?>;
-                    font-size: <?php echo esc_attr($options['entry_popup']['font_size']); ?>;">
+                    font-size: <?php echo esc_attr($options['entry_popup']['font_size']); ?>;
+                    font-weight: <?php echo esc_attr($options['entry_popup']['font_weight']); ?>;
+                    font-style: <?php echo esc_attr($options['entry_popup']['font_style']); ?>;
+                    text-transform: <?php echo esc_attr($options['entry_popup']['text_transform']); ?>;">
             
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -36,7 +39,7 @@ if (!defined('ABSPATH')) {
                 </h2>
                 
                 <p class="popmagique-text">
-                    <?php echo esc_html($options['entry_popup']['content']); ?>
+                    <?php echo wp_kses_post($options['entry_popup']['content']); ?>
                 </p>
                 
                 <div class="popmagique-actions">
@@ -56,11 +59,14 @@ if (!defined('ABSPATH')) {
     <?php if ($options['exit_popup']['enabled']): ?>
     <div id="popmagique-exit-popup" class="popmagique-popup" style="display: none;">
         <div class="popmagique-backdrop"></div>
-        <div class="popmagique-modal popmagique-exit-modal" 
-             style="background: <?php echo esc_attr($options['exit_popup']['background_color']); ?>; 
+        <div class="popmagique-modal popmagique-exit-modal"
+             style="background: <?php echo esc_attr($options['exit_popup']['background_color']); ?>;
                     color: <?php echo esc_attr($options['exit_popup']['text_color']); ?>;
                     font-family: <?php echo esc_attr($options['exit_popup']['font_family']); ?>;
-                    font-size: <?php echo esc_attr($options['exit_popup']['font_size']); ?>;">
+                    font-size: <?php echo esc_attr($options['exit_popup']['font_size']); ?>;
+                    font-weight: <?php echo esc_attr($options['exit_popup']['font_weight']); ?>;
+                    font-style: <?php echo esc_attr($options['exit_popup']['font_style']); ?>;
+                    text-transform: <?php echo esc_attr($options['exit_popup']['text_transform']); ?>;">
             
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -75,7 +81,7 @@ if (!defined('ABSPATH')) {
                 </h2>
 
                 <p class="popmagique-text">
-                    <?php echo esc_html($options['exit_popup']['content']); ?>
+                    <?php echo wp_kses_post($options['exit_popup']['content']); ?>
                 </p>
             </div>
         </div>
