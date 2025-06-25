@@ -67,8 +67,6 @@ msgstr "Délai d'affichage"
 msgid "Délai en millisecondes avant l'affichage (3000 = 3 secondes)"
 msgstr "Délai en millisecondes avant l'affichage (3000 = 3 secondes)"
 
-msgid "Titre"
-msgstr "Titre"
 
 msgid "Contenu"
 msgstr "Contenu"
