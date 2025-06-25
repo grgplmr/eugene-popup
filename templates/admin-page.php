@@ -156,6 +156,44 @@ if (!defined('ABSPATH')) {
                                 <p class="description">Transformation appliquée au texte</p>
                             </td>
                         </tr>
+                        <tr>
+                            <th scope="row">Couleur du texte du contenu</th>
+                            <td>
+                                <input type="color" name="entry_popup_content_style[text_color]" value="<?php echo esc_attr($options['entry_popup_content_style']['text_color']); ?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Alignement du contenu</th>
+                            <td>
+                                <select name="entry_popup_content_style[text_align]">
+                                    <option value="left" <?php selected($options['entry_popup_content_style']['text_align'], 'left'); ?>>Gauche</option>
+                                    <option value="center" <?php selected($options['entry_popup_content_style']['text_align'], 'center'); ?>>Centre</option>
+                                    <option value="right" <?php selected($options['entry_popup_content_style']['text_align'], 'right'); ?>>Droite</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Taille de police du contenu</th>
+                            <td>
+                                <select name="entry_popup_content_style[font_size]">
+                                    <option value="14px" <?php selected($options['entry_popup_content_style']['font_size'], '14px'); ?>>Petite (14px)</option>
+                                    <option value="16px" <?php selected($options['entry_popup_content_style']['font_size'], '16px'); ?>>Normale (16px)</option>
+                                    <option value="18px" <?php selected($options['entry_popup_content_style']['font_size'], '18px'); ?>>Grande (18px)</option>
+                                    <option value="20px" <?php selected($options['entry_popup_content_style']['font_size'], '20px'); ?>>Très grande (20px)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Police du contenu</th>
+                            <td>
+                                <select name="entry_popup_content_style[font_family]">
+                                    <option value="Inter, sans-serif" <?php selected($options['entry_popup_content_style']['font_family'], 'Inter, sans-serif'); ?>>Inter</option>
+                                    <option value="Arial, sans-serif" <?php selected($options['entry_popup_content_style']['font_family'], 'Arial, sans-serif'); ?>>Arial</option>
+                                    <option value="Georgia, serif" <?php selected($options['entry_popup_content_style']['font_family'], 'Georgia, serif'); ?>>Georgia</option>
+                                    <option value="'Times New Roman', serif" <?php selected($options['entry_popup_content_style']['font_family'], "'Times New Roman', serif"); ?>>Times New Roman</option>
+                                </select>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -292,6 +330,44 @@ if (!defined('ABSPATH')) {
                                     <option value="capitalize" <?php selected($options['exit_popup']['text_transform'], 'capitalize'); ?>>Capitalize</option>
                                 </select>
                                 <p class="description">Transformation appliquée au texte</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Couleur du texte du contenu</th>
+                            <td>
+                                <input type="color" name="exit_popup_content_style[text_color]" value="<?php echo esc_attr($options['exit_popup_content_style']['text_color']); ?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Alignement du contenu</th>
+                            <td>
+                                <select name="exit_popup_content_style[text_align]">
+                                    <option value="left" <?php selected($options['exit_popup_content_style']['text_align'], 'left'); ?>>Gauche</option>
+                                    <option value="center" <?php selected($options['exit_popup_content_style']['text_align'], 'center'); ?>>Centre</option>
+                                    <option value="right" <?php selected($options['exit_popup_content_style']['text_align'], 'right'); ?>>Droite</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Taille de police du contenu</th>
+                            <td>
+                                <select name="exit_popup_content_style[font_size]">
+                                    <option value="14px" <?php selected($options['exit_popup_content_style']['font_size'], '14px'); ?>>Petite (14px)</option>
+                                    <option value="16px" <?php selected($options['exit_popup_content_style']['font_size'], '16px'); ?>>Normale (16px)</option>
+                                    <option value="18px" <?php selected($options['exit_popup_content_style']['font_size'], '18px'); ?>>Grande (18px)</option>
+                                    <option value="20px" <?php selected($options['exit_popup_content_style']['font_size'], '20px'); ?>>Très grande (20px)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Police du contenu</th>
+                            <td>
+                                <select name="exit_popup_content_style[font_family]">
+                                    <option value="Inter, sans-serif" <?php selected($options['exit_popup_content_style']['font_family'], 'Inter, sans-serif'); ?>>Inter</option>
+                                    <option value="Arial, sans-serif" <?php selected($options['exit_popup_content_style']['font_family'], 'Arial, sans-serif'); ?>>Arial</option>
+                                    <option value="Georgia, serif" <?php selected($options['exit_popup_content_style']['font_family'], 'Georgia, serif'); ?>>Georgia</option>
+                                    <option value="'Times New Roman', serif" <?php selected($options['exit_popup_content_style']['font_family'], "'Times New Roman', serif"); ?>>Times New Roman</option>
+                                </select>
                             </td>
                         </tr>
                     </table>

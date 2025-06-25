@@ -39,7 +39,7 @@ if (!defined('ABSPATH')) {
                     <?php echo esc_html($options['entry_popup']['title']); ?>
                 </h2>
                 
-                <p class="popmagique-text">
+                <p class="popmagique-text" style="color: <?php echo esc_attr($options['entry_popup_content_style']['text_color']); ?>; font-family: <?php echo esc_attr($options['entry_popup_content_style']['font_family']); ?>; font-size: <?php echo esc_attr($options['entry_popup_content_style']['font_size']); ?>; text-align: <?php echo esc_attr($options['entry_popup_content_style']['text_align']); ?>;">
                     <?php echo wp_kses_post($options['entry_popup']['content']); ?>
                 </p>
                 
@@ -74,7 +74,7 @@ if (!defined('ABSPATH')) {
                     <?php echo esc_html($options['exit_popup']['title']); ?>
                 </h2>
 
-                <p class="popmagique-text">
+                <p class="popmagique-text" style="color: <?php echo esc_attr($options['exit_popup_content_style']['text_color']); ?>; font-family: <?php echo esc_attr($options['exit_popup_content_style']['font_family']); ?>; font-size: <?php echo esc_attr($options['exit_popup_content_style']['font_size']); ?>; text-align: <?php echo esc_attr($options['exit_popup_content_style']['text_align']); ?>;">
                     <?php echo wp_kses_post($options['exit_popup']['content']); ?>
                 </p>
 

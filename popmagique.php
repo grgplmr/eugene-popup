@@ -69,6 +69,18 @@ class PopMagique {
             'font_style' => 'normal',
             'text_transform' => 'none',
             'text_align' => 'center'
+        ),
+        'entry_popup_content_style' => array(
+            'text_color'  => '#1F2937',
+            'font_size'   => '16px',
+            'font_family' => 'Inter, sans-serif',
+            'text_align'  => 'center'
+        ),
+        'exit_popup_content_style' => array(
+            'text_color'  => '#1F2937',
+            'font_size'   => '16px',
+            'font_family' => 'Inter, sans-serif',
+            'text_align'  => 'center'
         )
     );
     
@@ -388,6 +400,22 @@ class PopMagique {
             'font_style' => in_array($settings['exit_popup']['font_style'], array('normal', 'italic'), true) ? $settings['exit_popup']['font_style'] : 'normal',
             'text_transform' => in_array($settings['exit_popup']['text_transform'], array('none', 'uppercase', 'lowercase', 'capitalize'), true) ? $settings['exit_popup']['text_transform'] : 'none',
             'text_align' => in_array($settings['exit_popup']['text_align'], array('left', 'center', 'right'), true) ? $settings['exit_popup']['text_align'] : 'center'
+        );
+
+        // Style du contenu du popup d'entrée
+        $clean['entry_popup_content_style'] = array(
+            'text_color'  => sanitize_hex_color($settings['entry_popup_content_style']['text_color']),
+            'font_size'   => sanitize_text_field($settings['entry_popup_content_style']['font_size']),
+            'font_family' => sanitize_text_field($settings['entry_popup_content_style']['font_family']),
+            'text_align'  => in_array($settings['entry_popup_content_style']['text_align'], array('left', 'center', 'right'), true) ? $settings['entry_popup_content_style']['text_align'] : 'center'
+        );
+
+        // Style du contenu du popup de sortie
+        $clean['exit_popup_content_style'] = array(
+            'text_color'  => sanitize_hex_color($settings['exit_popup_content_style']['text_color']),
+            'font_size'   => sanitize_text_field($settings['exit_popup_content_style']['font_size']),
+            'font_family' => sanitize_text_field($settings['exit_popup_content_style']['font_family']),
+            'text_align'  => in_array($settings['exit_popup_content_style']['text_align'], array('left', 'center', 'right'), true) ? $settings['exit_popup_content_style']['text_align'] : 'center'
         );
         
         return $clean;
