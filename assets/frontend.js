@@ -25,29 +25,4 @@ jQuery(function($) {
         $(this).closest('.popmagique-popup').fadeOut();
     });
 
-    $('#popmagique-subscribe-form').on('submit', function(e) {
-        e.preventDefault();
-        var form = $(this);
-        var button = form.find('button');
-        var loading = form.find('.button-loading');
-        var text = form.find('.button-text');
-
-        loading.show();
-        text.hide();
-
-        $.post(popmagique_config.ajax_url, {
-            action: 'popmagique_subscribe_email',
-            nonce: popmagique_config.nonce,
-            email: form.find('input[name="email"]').val()
-        }, function(res) {
-            loading.hide();
-            text.show();
-            if (res.success) {
-                $('#popmagique-newsletter-form').hide();
-                $('#popmagique-success-message').show();
-            } else {
-                alert(res.data || 'Erreur');
-            }
-        });
-    });
 });

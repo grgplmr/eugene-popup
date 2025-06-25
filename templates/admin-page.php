@@ -26,7 +26,6 @@ if (!defined('ABSPATH')) {
         <nav class="nav-tab-wrapper">
             <a href="#entry-popup" class="nav-tab nav-tab-active">🎯 Popup d'Entrée</a>
             <a href="#exit-popup" class="nav-tab">✋ Popup de Sortie</a>
-            <a href="#advanced" class="nav-tab">⚙️ Avancé</a>
         </nav>
 
         <!-- Popup d'Entrée -->
@@ -167,55 +166,10 @@ if (!defined('ABSPATH')) {
                                 <textarea name="exit_popup[content]" rows="4" class="large-text"><?php echo esc_textarea($options['exit_popup']['content']); ?></textarea>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">Placeholder email</th>
-                            <td>
-                                <input type="text" name="exit_popup[email_placeholder]" value="<?php echo esc_attr($options['exit_popup']['email_placeholder']); ?>" class="regular-text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Texte du bouton</th>
-                            <td>
-                                <input type="text" name="exit_popup[button_text]" value="<?php echo esc_attr($options['exit_popup']['button_text']); ?>" class="regular-text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Couleur du bouton</th>
-                            <td>
-                                <input type="color" name="exit_popup[button_color]" value="<?php echo esc_attr($options['exit_popup']['button_color']); ?>">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Message de succès</th>
-                            <td>
-                                <input type="text" name="exit_popup[success_message]" value="<?php echo esc_attr($options['exit_popup']['success_message']); ?>" class="regular-text">
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </div>
 
-            <div class="postbox">
-                <h2 class="hndle">Intégration Mailchimp</h2>
-                <div class="inside">
-                    <table class="form-table">
-                        <tr>
-                            <th scope="row">Clé API Mailchimp</th>
-                            <td>
-                                <input type="text" name="exit_popup[mailchimp_api_key]" value="<?php echo esc_attr($options['exit_popup']['mailchimp_api_key']); ?>" class="regular-text">
-                                <p class="description">Optionnel : Clé API pour synchroniser avec Mailchimp</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">ID de liste Mailchimp</th>
-                            <td>
-                                <input type="text" name="exit_popup[mailchimp_list_id]" value="<?php echo esc_attr($options['exit_popup']['mailchimp_list_id']); ?>" class="regular-text">
-                                <p class="description">ID de la liste Mailchimp où ajouter les abonnés</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
 
             <div class="postbox">
                 <h2 class="hndle">Style et Apparence</h2>
@@ -261,45 +215,6 @@ if (!defined('ABSPATH')) {
             </div>
         </div>
 
-        <!-- Avancé -->
-        <div id="advanced" class="tab-content">
-            <div class="postbox">
-                <h2 class="hndle">Paramètres Avancés</h2>
-                <div class="inside">
-                    <h3>🎨 Aperçu des Popups</h3>
-                    <p>Testez vos popups avant de les publier :</p>
-                    <div class="preview-buttons">
-                        <button type="button" class="button button-secondary" id="preview-entry">👁️ Aperçu Popup d'Entrée</button>
-                        <button type="button" class="button button-secondary" id="preview-exit">👁️ Aperçu Popup de Sortie</button>
-                    </div>
-                    
-                    <hr>
-                    
-                    <h3>📊 Statistiques</h3>
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <div class="stat-number"><?php echo wp_count_posts()->publish; ?></div>
-                            <div class="stat-label">Articles publiés</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-number"><?php 
-                                global $wpdb;
-                                $table_name = $wpdb->prefix . 'popmagique_subscribers';
-                                echo $wpdb->get_var("SELECT COUNT(*) FROM $table_name");
-                            ?></div>
-                            <div class="stat-label">Abonnés newsletter</div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-                    
-                    <h3>🔧 Outils</h3>
-                    <p>
-                        <em>Fonctionnalités d'import/export à venir.</em>
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="popmagique-footer">
