@@ -340,7 +340,22 @@ class PopMagique {
             'body' => json_encode($data)
         );
         
-        wp_remote_post($url, $args);
+        $response = wp_remote_post($url, $args);
+
+        if (is_wp_error($response)) {
+            $message = 'Mailchimp API error: ' . $response->get_error_message();
+            error_log($message);
+            wp_mail(get_option('admin_email'), 'PopMagique Mailchimp Error', $message);
+            return;
+        }
+
+        $code = wp_remote_retrieve_response_code($response);
+        if ($code < 200 || $code >= 300) {
+            $body    = wp_remote_retrieve_body($response);
+            $message = sprintf('Mailchimp API request failed with status %s: %s', $code, $body);
+            error_log($message);
+            wp_mail(get_option('admin_email'), 'PopMagique Mailchimp Error', $message);
+        }
     }
     
     /**
