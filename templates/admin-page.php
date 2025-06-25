@@ -295,10 +295,8 @@ if (!defined('ABSPATH')) {
                     
                     <h3>🔧 Outils</h3>
                     <p>
-                        <button type="button" class="button" id="export-settings">📤 Exporter la configuration</button>
-                        <button type="button" class="button" id="import-settings">📥 Importer une configuration</button>
+                        <em>Fonctionnalités d'import/export à venir.</em>
                     </p>
-                    <input type="file" id="import-file" accept=".json" style="display: none;">
                 </div>
             </div>
         </div>
