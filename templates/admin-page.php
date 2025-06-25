@@ -156,6 +156,13 @@ if (!defined('ABSPATH')) {
                                 <p class="description">Transformation appliquée au texte</p>
                             </td>
                         </tr>
+                        <tr>
+                            <th scope="row">Largeur max</th>
+                            <td>
+                                <input type="number" name="entry_popup[width]" value="<?php echo esc_attr($options['entry_popup']['width']); ?>" min="200" step="10" class="small-text"> px
+                                <p class="description">Largeur maximale du popup</p>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -292,6 +299,13 @@ if (!defined('ABSPATH')) {
                                     <option value="capitalize" <?php selected($options['exit_popup']['text_transform'], 'capitalize'); ?>>Capitalize</option>
                                 </select>
                                 <p class="description">Transformation appliquée au texte</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Largeur max</th>
+                            <td>
+                                <input type="number" name="exit_popup[width]" value="<?php echo esc_attr($options['exit_popup']['width']); ?>" min="200" step="10" class="small-text"> px
+                                <p class="description">Largeur maximale du popup</p>
                             </td>
                         </tr>
                     </table>
