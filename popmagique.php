@@ -102,6 +102,7 @@ class PopMagique {
             add_action('admin_init', array($this, 'admin_init'));
             add_action('wp_ajax_popmagique_save_settings', array($this, 'save_settings'));
             add_action('wp_ajax_popmagique_subscribe_email', array($this, 'subscribe_email'));
+            add_action('wp_ajax_popmagique_delete_subscriber', array($this, 'delete_subscriber'));
         }
         
         // Hooks frontend
@@ -112,6 +113,7 @@ class PopMagique {
         
         // AJAX pour les utilisateurs non connectés
         add_action('wp_ajax_nopriv_popmagique_subscribe_email', array($this, 'subscribe_email'));
+        add_action('wp_ajax_nopriv_popmagique_delete_subscriber', array($this, 'delete_subscriber'));
     }
     
     /**
@@ -312,8 +314,36 @@ class PopMagique {
         if (!empty($options['exit_popup']['mailchimp_api_key']) && !empty($options['exit_popup']['mailchimp_list_id'])) {
             $this->add_to_mailchimp($email, $options['exit_popup']);
         }
-        
+
         wp_send_json_success('Inscription réussie !');
+    }
+
+    /**
+     * Supprimer un abonné via AJAX
+     */
+    public function delete_subscriber() {
+        check_ajax_referer('popmagique_nonce', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error('Accès non autorisé');
+        }
+
+        $id = isset($_POST['id']) ? absint($_POST['id']) : 0;
+
+        if (!$id) {
+            wp_send_json_error('ID invalide');
+        }
+
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'popmagique_subscribers';
+
+        $deleted = $wpdb->delete($table_name, array('id' => $id), array('%d'));
+
+        if ($deleted === false) {
+            wp_send_json_error("Erreur lors de la suppression");
+        }
+
+        wp_send_json_success('Abonné supprimé');
     }
     
     /**
