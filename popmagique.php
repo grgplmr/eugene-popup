@@ -56,17 +56,11 @@ class PopMagique {
         'exit_popup' => array(
             'enabled' => true,
             'title' => '✋ Attendez !',
-            'content' => 'Ne partez pas sans vous abonner à notre newsletter pour recevoir nos meilleures offres et conseils exclusifs.',
-            'button_text' => 'S\'abonner maintenant',
-            'button_color' => '#3B82F6',
+            'content' => 'Ne partez pas sans profiter de nos meilleures offres.',
             'background_color' => 'rgba(255, 255, 255, 0.1)',
             'text_color' => '#1F2937',
             'font_size' => '16px',
-            'font_family' => 'Inter, sans-serif',
-            'email_placeholder' => 'Votre adresse email...',
-            'success_message' => '🎉 Merci ! Vous êtes maintenant abonné(e) à notre newsletter.',
-            'mailchimp_api_key' => '',
-            'mailchimp_list_id' => ''
+            'font_family' => 'Inter, sans-serif'
         )
     );
     
@@ -313,11 +307,6 @@ class PopMagique {
             wp_send_json_error('Erreur lors de l\'inscription');
         }
         
-        // Intégration Mailchimp si configurée
-        $options = get_option('popmagique_options', $this->default_options);
-        if (!empty($options['exit_popup']['mailchimp_api_key']) && !empty($options['exit_popup']['mailchimp_list_id'])) {
-            $this->add_to_mailchimp($email, $options['exit_popup']);
-        }
 
         wp_send_json_success('Inscription réussie !');
     }
@@ -350,47 +339,7 @@ class PopMagique {
         wp_send_json_success('Abonné supprimé');
     }
     
-    /**
-     * Ajouter un email à Mailchimp
-     */
-    private function add_to_mailchimp($email, $settings) {
-        $api_key = $settings['mailchimp_api_key'];
-        $list_id = $settings['mailchimp_list_id'];
-        
-        $datacenter = substr($api_key, strpos($api_key, '-') + 1);
-        $url = "https://{$datacenter}.api.mailchimp.com/3.0/lists/{$list_id}/members";
-        
-        $data = array(
-            'email_address' => $email,
-            'status' => 'subscribed'
-        );
-        
-        $args = array(
-            'method' => 'POST',
-            'headers' => array(
-                'Authorization' => 'Basic ' . base64_encode('user:' . $api_key),
-                'Content-Type' => 'application/json'
-            ),
-            'body' => json_encode($data)
-        );
-        
-        $response = wp_remote_post($url, $args);
 
-        if (is_wp_error($response)) {
-            $message = 'Mailchimp API error: ' . $response->get_error_message();
-            error_log($message);
-            wp_mail(get_option('admin_email'), 'PopMagique Mailchimp Error', $message);
-            return;
-        }
-
-        $code = wp_remote_retrieve_response_code($response);
-        if ($code < 200 || $code >= 300) {
-            $body    = wp_remote_retrieve_body($response);
-            $message = sprintf('Mailchimp API request failed with status %s: %s', $code, $body);
-            error_log($message);
-            wp_mail(get_option('admin_email'), 'PopMagique Mailchimp Error', $message);
-        }
-    }
     
     /**
      * Nettoyer les paramètres
@@ -419,16 +368,10 @@ class PopMagique {
             'enabled' => isset($settings['exit_popup']['enabled']) ? (bool)$settings['exit_popup']['enabled'] : false,
             'title' => sanitize_text_field($settings['exit_popup']['title']),
             'content' => sanitize_textarea_field($settings['exit_popup']['content']),
-            'button_text' => sanitize_text_field($settings['exit_popup']['button_text']),
-            'button_color' => sanitize_hex_color($settings['exit_popup']['button_color']),
             'background_color' => sanitize_text_field($settings['exit_popup']['background_color']),
             'text_color' => sanitize_hex_color($settings['exit_popup']['text_color']),
             'font_size' => sanitize_text_field($settings['exit_popup']['font_size']),
-            'font_family' => sanitize_text_field($settings['exit_popup']['font_family']),
-            'email_placeholder' => sanitize_text_field($settings['exit_popup']['email_placeholder']),
-            'success_message' => sanitize_text_field($settings['exit_popup']['success_message']),
-            'mailchimp_api_key' => sanitize_text_field($settings['exit_popup']['mailchimp_api_key']),
-            'mailchimp_list_id' => sanitize_text_field($settings['exit_popup']['mailchimp_list_id'])
+            'font_family' => sanitize_text_field($settings['exit_popup']['font_family'])
         );
         
         return $clean;
