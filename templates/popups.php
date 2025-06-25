@@ -19,25 +19,25 @@ if (!defined('ABSPATH')) {
                     font-style: <?php echo esc_attr($options['entry_popup']['font_style']); ?>;
                     text-transform: <?php echo esc_attr($options['entry_popup']['text_transform']); ?>;
                     text-align: <?php echo esc_attr($options['entry_popup']['text_align']); ?>;">
-            
+
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            
+
             <div class="popmagique-content">
                 <?php if (!empty($options['entry_popup']['image_url'])): ?>
                 <div class="popmagique-image">
                     <img src="<?php echo esc_url($options['entry_popup']['image_url']); ?>" alt="">
                 </div>
                 <?php endif; ?>
-                
+
                 <p class="popmagique-text" style="color: <?php echo esc_attr($options['entry_popup_content_style']['text_color']); ?>; font-family: <?php echo esc_attr($options['entry_popup_content_style']['font_family']); ?>; font-size: <?php echo esc_attr($options['entry_popup_content_style']['font_size']); ?>; text-align: <?php echo esc_attr($options['entry_popup_content_style']['text_align']); ?>;">
                     <?php echo wp_kses_post($options['entry_popup']['content']); ?>
                 </p>
-                
+
             </div>
         </div>
     </div>
@@ -56,14 +56,14 @@ if (!defined('ABSPATH')) {
                     font-style: <?php echo esc_attr($options['exit_popup']['font_style']); ?>;
                     text-transform: <?php echo esc_attr($options['exit_popup']['text_transform']); ?>;
                     text-align: <?php echo esc_attr($options['exit_popup']['text_align']); ?>;">
-            
+
             <button class="popmagique-close" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            
+
             <div class="popmagique-content">
                 <p class="popmagique-text" style="color: <?php echo esc_attr($options['exit_popup_content_style']['text_color']); ?>; font-family: <?php echo esc_attr($options['exit_popup_content_style']['font_family']); ?>; font-size: <?php echo esc_attr($options['exit_popup_content_style']['font_size']); ?>; text-align: <?php echo esc_attr($options['exit_popup_content_style']['text_align']); ?>;">
                     <?php echo wp_kses_post($options['exit_popup']['content']); ?>
