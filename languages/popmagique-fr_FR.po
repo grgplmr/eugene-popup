@@ -1,0 +1,257 @@
+# French (France) language file for PopMagique
+# Copyright (C) 2024 PopMagique
+# This file is distributed under the same license as the PopMagique package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PopMagique 1.0.0\n"
+"Report-Msgid-Bugs-To: https://popmagique.com/support\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: PopMagique Team\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# Plugin headers
+msgid "PopMagique"
+msgstr "PopMagique"
+
+msgid "Système de double popup intelligent avec design glassmorphism pour WordPress."
+msgstr "Système de double popup intelligent avec design glassmorphism pour WordPress."
+
+# Admin menu
+msgid "Configuration PopMagique"
+msgstr "Configuration PopMagique"
+
+msgid "Paramètres"
+msgstr "Paramètres"
+
+msgid "Abonnés"
+msgstr "Abonnés"
+
+msgid "Abonnés Newsletter"
+msgstr "Abonnés Newsletter"
+
+# Settings page
+msgid "Popup d'Entrée"
+msgstr "Popup d'Entrée"
+
+msgid "Popup de Sortie"
+msgstr "Popup de Sortie"
+
+msgid "Avancé"
+msgstr "Avancé"
+
+msgid "Enregistrer les paramètres"
+msgstr "Enregistrer les paramètres"
+
+msgid "Réinitialiser"
+msgstr "Réinitialiser"
+
+# Entry popup settings
+msgid "Configuration du Popup d'Entrée"
+msgstr "Configuration du Popup d'Entrée"
+
+msgid "Activer le popup"
+msgstr "Activer le popup"
+
+msgid "Activer ou désactiver le popup d'entrée"
+msgstr "Activer ou désactiver le popup d'entrée"
+
+msgid "Délai d'affichage"
+msgstr "Délai d'affichage"
+
+msgid "Délai en millisecondes avant l'affichage (3000 = 3 secondes)"
+msgstr "Délai en millisecondes avant l'affichage (3000 = 3 secondes)"
+
+msgid "Titre"
+msgstr "Titre"
+
+msgid "Contenu"
+msgstr "Contenu"
+
+msgid "URL de l'image"
+msgstr "URL de l'image"
+
+msgid "Image optionnelle à afficher dans le popup"
+msgstr "Image optionnelle à afficher dans le popup"
+
+msgid "Choisir une image"
+msgstr "Choisir une image"
+
+msgid "Texte du bouton"
+msgstr "Texte du bouton"
+
+msgid "URL du bouton"
+msgstr "URL du bouton"
+
+msgid "URL vers laquelle le bouton redirige"
+msgstr "URL vers laquelle le bouton redirige"
+
+msgid "Couleur du bouton"
+msgstr "Couleur du bouton"
+
+# Exit popup settings
+msgid "Configuration du Popup de Sortie"
+msgstr "Configuration du Popup de Sortie"
+
+msgid "Activer ou désactiver le popup de sortie"
+msgstr "Activer ou désactiver le popup de sortie"
+
+msgid "Placeholder email"
+msgstr "Placeholder email"
+
+msgid "Message de succès"
+msgstr "Message de succès"
+
+msgid "Intégration Mailchimp"
+msgstr "Intégration Mailchimp"
+
+msgid "Clé API Mailchimp"
+msgstr "Clé API Mailchimp"
+
+msgid "Optionnel : Clé API pour synchroniser avec Mailchimp"
+msgstr "Optionnel : Clé API pour synchroniser avec Mailchimp"
+
+msgid "ID de liste Mailchimp"
+msgstr "ID de liste Mailchimp"
+
+msgid "ID de la liste Mailchimp où ajouter les abonnés"
+msgstr "ID de la liste Mailchimp où ajouter les abonnés"
+
+# Style settings
+msgid "Style et Apparence"
+msgstr "Style et Apparence"
+
+msgid "Couleur de fond"
+msgstr "Couleur de fond"
+
+msgid "Format RGBA recommandé : rgba(255, 255, 255, 0.1)"
+msgstr "Format RGBA recommandé : rgba(255, 255, 255, 0.1)"
+
+msgid "Couleur du texte"
+msgstr "Couleur du texte"
+
+msgid "Taille de police"
+msgstr "Taille de police"
+
+msgid "Petite (14px)"
+msgstr "Petite (14px)"
+
+msgid "Normale (16px)"
+msgstr "Normale (16px)"
+
+msgid "Grande (18px)"
+msgstr "Grande (18px)"
+
+msgid "Très grande (20px)"
+msgstr "Très grande (20px)"
+
+msgid "Police"
+msgstr "Police"
+
+# Advanced settings
+msgid "Paramètres Avancés"
+msgstr "Paramètres Avancés"
+
+msgid "Aperçu des Popups"
+msgstr "Aperçu des Popups"
+
+msgid "Testez vos popups avant de les publier :"
+msgstr "Testez vos popups avant de les publier :"
+
+msgid "Aperçu Popup d'Entrée"
+msgstr "Aperçu Popup d'Entrée"
+
+msgid "Aperçu Popup de Sortie"
+msgstr "Aperçu Popup de Sortie"
+
+msgid "Statistiques"
+msgstr "Statistiques"
+
+msgid "Articles publiés"
+msgstr "Articles publiés"
+
+msgid "Abonnés newsletter"
+msgstr "Abonnés newsletter"
+
+msgid "Outils"
+msgstr "Outils"
+
+msgid "Exporter la configuration"
+msgstr "Exporter la configuration"
+
+msgid "Importer une configuration"
+msgstr "Importer une configuration"
+
+# Subscribers page
+msgid "Total des abonnés"
+msgstr "Total des abonnés"
+
+msgid "Cette semaine"
+msgstr "Cette semaine"
+
+msgid "Aujourd'hui"
+msgstr "Aujourd'hui"
+
+msgid "Exporter en CSV"
+msgstr "Exporter en CSV"
+
+msgid "Aucun abonné pour le moment"
+msgstr "Aucun abonné pour le moment"
+
+msgid "Les adresses email collectées via le popup de sortie apparaîtront ici."
+msgstr "Les adresses email collectées via le popup de sortie apparaîtront ici."
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Date d'inscription"
+msgstr "Date d'inscription"
+
+msgid "Adresse IP"
+msgstr "Adresse IP"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Supprimer"
+msgstr "Supprimer"
+
+# Messages
+msgid "Paramètres sauvegardés avec succès !"
+msgstr "Paramètres sauvegardés avec succès !"
+
+msgid "Erreur lors de la sauvegarde"
+msgstr "Erreur lors de la sauvegarde"
+
+msgid "Adresse email invalide"
+msgstr "Adresse email invalide"
+
+msgid "Cette adresse email est déjà inscrite"
+msgstr "Cette adresse email est déjà inscrite"
+
+msgid "Erreur lors de l'inscription"
+msgstr "Erreur lors de l'inscription"
+
+msgid "Inscription réussie !"
+msgstr "Inscription réussie !"
+
+msgid "Accès non autorisé"
+msgstr "Accès non autorisé"
+
+# Frontend
+msgid "Inscription..."
+msgstr "Inscription..."
+
+msgid "Veuillez saisir une adresse email valide."
+msgstr "Veuillez saisir une adresse email valide."
+
+msgid "Une erreur est survenue."
+msgstr "Une erreur est survenue."
+
+msgid "Erreur de connexion. Veuillez réessayer."
+msgstr "Erreur de connexion. Veuillez réessayer."
