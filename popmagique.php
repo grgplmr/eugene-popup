@@ -200,6 +200,8 @@ class PopMagique {
      */
     public function admin_init() {
         wp_enqueue_style('wp-color-picker');
+        // Load WordPress media scripts so the upload button can use the media library
+        wp_enqueue_media();
         wp_enqueue_style('popmagique-admin', POPMAGIQUE_PLUGIN_URL . 'assets/admin.css', array(), POPMAGIQUE_VERSION);
         wp_enqueue_script('popmagique-admin', POPMAGIQUE_PLUGIN_URL . 'assets/admin.js', array('jquery', 'wp-color-picker'), POPMAGIQUE_VERSION, true);
         
