@@ -104,6 +104,12 @@ if (!defined('ABSPATH')) {
                                     <option value="16px" <?php selected($options['entry_popup']['font_size'], '16px'); ?>>Normale (16px)</option>
                                     <option value="18px" <?php selected($options['entry_popup']['font_size'], '18px'); ?>>Grande (18px)</option>
                                     <option value="20px" <?php selected($options['entry_popup']['font_size'], '20px'); ?>>Très grande (20px)</option>
+                                    <option value="22px" <?php selected($options['entry_popup']['font_size'], '22px'); ?>>22px</option>
+                                    <option value="24px" <?php selected($options['entry_popup']['font_size'], '24px'); ?>>24px</option>
+                                    <option value="26px" <?php selected($options['entry_popup']['font_size'], '26px'); ?>>26px</option>
+                                    <option value="28px" <?php selected($options['entry_popup']['font_size'], '28px'); ?>>28px</option>
+                                    <option value="30px" <?php selected($options['entry_popup']['font_size'], '30px'); ?>>30px</option>
+                                    <option value="32px" <?php selected($options['entry_popup']['font_size'], '32px'); ?>>32px</option>
                                 </select>
                             </td>
                         </tr>
@@ -236,6 +242,12 @@ if (!defined('ABSPATH')) {
                                     <option value="16px" <?php selected($options['exit_popup']['font_size'], '16px'); ?>>Normale (16px)</option>
                                     <option value="18px" <?php selected($options['exit_popup']['font_size'], '18px'); ?>>Grande (18px)</option>
                                     <option value="20px" <?php selected($options['exit_popup']['font_size'], '20px'); ?>>Très grande (20px)</option>
+                                    <option value="22px" <?php selected($options['exit_popup']['font_size'], '22px'); ?>>22px</option>
+                                    <option value="24px" <?php selected($options['exit_popup']['font_size'], '24px'); ?>>24px</option>
+                                    <option value="26px" <?php selected($options['exit_popup']['font_size'], '26px'); ?>>26px</option>
+                                    <option value="28px" <?php selected($options['exit_popup']['font_size'], '28px'); ?>>28px</option>
+                                    <option value="30px" <?php selected($options['exit_popup']['font_size'], '30px'); ?>>30px</option>
+                                    <option value="32px" <?php selected($options['exit_popup']['font_size'], '32px'); ?>>32px</option>
                                 </select>
                             </td>
                         </tr>

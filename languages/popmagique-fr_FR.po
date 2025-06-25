@@ -148,6 +148,24 @@ msgstr "Grande (18px)"
 msgid "Très grande (20px)"
 msgstr "Très grande (20px)"
 
+msgid "22px"
+msgstr "22px"
+
+msgid "24px"
+msgstr "24px"
+
+msgid "26px"
+msgstr "26px"
+
+msgid "28px"
+msgstr "28px"
+
+msgid "30px"
+msgstr "30px"
+
+msgid "32px"
+msgstr "32px"
+
 msgid "Police"
 msgstr "Police"
 
