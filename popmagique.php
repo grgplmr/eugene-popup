@@ -51,6 +51,9 @@ class PopMagique {
             'text_color' => '#1F2937',
             'font_size' => '16px',
             'font_family' => 'Inter, sans-serif',
+            'font_weight' => 'normal',
+            'font_style' => 'normal',
+            'text_transform' => 'none',
             'image_url' => ''
         ),
         'exit_popup' => array(
@@ -60,7 +63,10 @@ class PopMagique {
             'background_color' => 'rgba(255, 255, 255, 0.1)',
             'text_color' => '#1F2937',
             'font_size' => '16px',
-            'font_family' => 'Inter, sans-serif'
+            'font_family' => 'Inter, sans-serif',
+            'font_weight' => 'normal',
+            'font_style' => 'normal',
+            'text_transform' => 'none'
         )
     );
     
@@ -352,7 +358,7 @@ class PopMagique {
             'enabled' => isset($settings['entry_popup']['enabled']) ? (bool)$settings['entry_popup']['enabled'] : false,
             'delay' => absint($settings['entry_popup']['delay']),
             'title' => sanitize_text_field($settings['entry_popup']['title']),
-            'content' => sanitize_textarea_field($settings['entry_popup']['content']),
+            'content' => wp_kses_post($settings['entry_popup']['content']),
             'button_text' => sanitize_text_field($settings['entry_popup']['button_text']),
             'button_color' => sanitize_hex_color($settings['entry_popup']['button_color']),
             'button_url' => esc_url_raw($settings['entry_popup']['button_url']),
@@ -360,6 +366,9 @@ class PopMagique {
             'text_color' => sanitize_hex_color($settings['entry_popup']['text_color']),
             'font_size' => sanitize_text_field($settings['entry_popup']['font_size']),
             'font_family' => sanitize_text_field($settings['entry_popup']['font_family']),
+            'font_weight' => in_array($settings['entry_popup']['font_weight'], array('normal', 'bold'), true) ? $settings['entry_popup']['font_weight'] : 'normal',
+            'font_style' => in_array($settings['entry_popup']['font_style'], array('normal', 'italic'), true) ? $settings['entry_popup']['font_style'] : 'normal',
+            'text_transform' => in_array($settings['entry_popup']['text_transform'], array('none', 'uppercase', 'lowercase', 'capitalize'), true) ? $settings['entry_popup']['text_transform'] : 'none',
             'image_url' => esc_url_raw($settings['entry_popup']['image_url'])
         );
         
@@ -367,11 +376,14 @@ class PopMagique {
         $clean['exit_popup'] = array(
             'enabled' => isset($settings['exit_popup']['enabled']) ? (bool)$settings['exit_popup']['enabled'] : false,
             'title' => sanitize_text_field($settings['exit_popup']['title']),
-            'content' => sanitize_textarea_field($settings['exit_popup']['content']),
+            'content' => wp_kses_post($settings['exit_popup']['content']),
             'background_color' => sanitize_text_field($settings['exit_popup']['background_color']),
             'text_color' => sanitize_hex_color($settings['exit_popup']['text_color']),
             'font_size' => sanitize_text_field($settings['exit_popup']['font_size']),
-            'font_family' => sanitize_text_field($settings['exit_popup']['font_family'])
+            'font_family' => sanitize_text_field($settings['exit_popup']['font_family']),
+            'font_weight' => in_array($settings['exit_popup']['font_weight'], array('normal', 'bold'), true) ? $settings['exit_popup']['font_weight'] : 'normal',
+            'font_style' => in_array($settings['exit_popup']['font_style'], array('normal', 'italic'), true) ? $settings['exit_popup']['font_style'] : 'normal',
+            'text_transform' => in_array($settings['exit_popup']['text_transform'], array('none', 'uppercase', 'lowercase', 'capitalize'), true) ? $settings['exit_popup']['text_transform'] : 'none'
         );
         
         return $clean;
