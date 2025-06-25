@@ -52,12 +52,6 @@ if (!defined('ABSPATH')) {
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">Titre</th>
-                            <td>
-                                <input type="text" name="entry_popup[title]" value="<?php echo esc_attr($options['entry_popup']['title']); ?>" class="regular-text">
-                            </td>
-                        </tr>
-                        <tr>
                             <th scope="row">Contenu</th>
                             <td>
                                 <textarea name="entry_popup[content]" rows="4" class="large-text"><?php echo esc_textarea($options['entry_popup']['content']); ?></textarea>
@@ -175,12 +169,6 @@ if (!defined('ABSPATH')) {
                                     <span class="slider"></span>
                                 </label>
                                 <p class="description">Activer ou désactiver le popup de sortie</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Titre</th>
-                            <td>
-                                <input type="text" name="exit_popup[title]" value="<?php echo esc_attr($options['exit_popup']['title']); ?>" class="regular-text">
                             </td>
                         </tr>
                         <tr>

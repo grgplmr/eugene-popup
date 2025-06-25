@@ -42,7 +42,6 @@ class PopMagique {
         'entry_popup' => array(
             'enabled' => true,
             'delay' => 3000,
-            'title' => '🎉 Offre Spéciale !',
             'content' => 'Découvrez nos produits avec 20% de réduction pour les nouveaux visiteurs. Une occasion unique à ne pas manquer !',
             'background_color' => 'rgba(255, 255, 255, 0.1)',
             'text_color' => '#1F2937',
@@ -56,7 +55,6 @@ class PopMagique {
         ),
         'exit_popup' => array(
             'enabled' => true,
-            'title' => '✋ Attendez !',
             'content' => 'Ne partez pas sans profiter de nos meilleures offres.',
             'button_text' => 'Voir l\'offre',
             'button_color' => '#EC4899',
@@ -359,7 +357,6 @@ class PopMagique {
         $clean['entry_popup'] = array(
             'enabled' => isset($settings['entry_popup']['enabled']) ? (bool)$settings['entry_popup']['enabled'] : false,
             'delay' => absint($settings['entry_popup']['delay']),
-            'title' => sanitize_text_field($settings['entry_popup']['title']),
             'content' => wp_kses_post($settings['entry_popup']['content']),
             'background_color' => sanitize_text_field($settings['entry_popup']['background_color']),
             'text_color' => sanitize_hex_color($settings['entry_popup']['text_color']),
@@ -375,7 +372,6 @@ class PopMagique {
         // Popup de sortie
         $clean['exit_popup'] = array(
             'enabled' => isset($settings['exit_popup']['enabled']) ? (bool)$settings['exit_popup']['enabled'] : false,
-            'title' => sanitize_text_field($settings['exit_popup']['title']),
             'content' => wp_kses_post($settings['exit_popup']['content']),
             'button_text' => sanitize_text_field($settings['exit_popup']['button_text']),
             'button_color' => sanitize_hex_color($settings['exit_popup']['button_color']),
