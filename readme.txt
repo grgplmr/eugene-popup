@@ -1,6 +1,6 @@
 === PopMagique ===
 Contributors: popmagique
-Tags: popup, newsletter, exit-intent, glassmorphism, conversion
+Tags: popup, exit-intent, glassmorphism, conversion
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.4
@@ -8,14 +8,14 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Système de double popup intelligent avec design glassmorphism pour WordPress. Popup d'entrée publicitaire et popup de sortie newsletter avec détection exit intent.
+Système de double popup intelligent avec design glassmorphism pour WordPress. Popup d'entrée publicitaire et popup de sortie promotionnel avec détection exit intent.
 
 == Description ==
 
 **PopMagique** est un plugin WordPress moderne qui vous permet d'augmenter vos conversions grâce à un système de double popup intelligent :
 
 🎯 **Popup d'Entrée** - Affiche automatiquement une publicité ou une offre spéciale après 3 secondes
-✋ **Popup de Sortie** - Détecte l'intention de quitter et propose l'inscription à votre newsletter
+✋ **Popup de Sortie** - Détecte l'intention de quitter et met en avant votre offre
 
 = Fonctionnalités Principales =
 
@@ -24,16 +24,13 @@ Système de double popup intelligent avec design glassmorphism pour WordPress. P
 * **100% Responsive** - Optimisé pour tous les appareils
 * **Interface en Français** - Plugin entièrement traduit
 * **Configuration Intuitive** - Panneau d'administration simple et complet
-* **Intégration Mailchimp** - Synchronisation automatique avec vos listes
-* **Base de Données Locale** - Stockage des emails directement dans WordPress
-* **Formulaire d'inscription** - Le popup de sortie envoie l'email via AJAX
-* **Export CSV** - Exportez vos abonnés facilement
+* **Intégration Mailchimp** - Synchronisation automatique avec vos listes (optionnelle)
 * **Personnalisation Complète** - Couleurs, polices (graisse, style, transformation), textes et délais configurables
 
 = Cas d'Usage =
 
 * **E-commerce** - Promouvoir des offres spéciales et réduire l'abandon de panier
-* **Blogs** - Augmenter les abonnements à la newsletter
+* **Blogs** - Mettre en avant vos contenus avant la sortie du visiteur
 * **Sites Vitrine** - Capturer des leads qualifiés
 * **Landing Pages** - Maximiser les conversions
 
@@ -71,22 +68,14 @@ Absolument ! PopMagique inclut une détection exit intent spécialement conçue 
 
 Oui, vous pouvez modifier les couleurs, polices, tailles, textes et même ajouter vos propres images.
 
-= Les emails sont-ils stockés dans WordPress ? =
-
-Oui, tous les emails sont stockés dans votre base de données WordPress. Vous pouvez aussi les synchroniser avec Mailchimp.
-
-= Le plugin est-il compatible RGPD ? =
-
-Le plugin stocke uniquement les emails fournis volontairement par les utilisateurs. Vous devez ajouter vos propres mentions légales selon vos besoins.
 
 == Screenshots ==
 
 1. Interface d'administration - Configuration du popup d'entrée
 2. Interface d'administration - Configuration du popup de sortie
 3. Popup d'entrée avec design glassmorphism
-4. Popup de sortie avec formulaire newsletter
-5. Liste des abonnés avec statistiques
-6. Aperçu responsive sur mobile
+4. Popup de sortie promotionnel
+5. Aperçu responsive sur mobile
 
 == Changelog ==
 
@@ -96,8 +85,6 @@ Le plugin stocke uniquement les emails fournis volontairement par les utilisateu
 * Popup de sortie avec détection exit intent
 * Design glassmorphism responsive
 * Interface d'administration complète
-* Intégration Mailchimp
-* Export CSV des abonnés
 * Support desktop et mobile
 
 == Upgrade Notice ==

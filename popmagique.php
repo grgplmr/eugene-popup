@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PopMagique
  * Plugin URI: https://popmagique.com
- * Description: Système de double popup intelligent avec design glassmorphism pour WordPress. Popup d'entrée publicitaire et popup de sortie newsletter avec détection exit intent.
+ * Description: Système de double popup intelligent avec design glassmorphism pour WordPress. Popup d'entrée publicitaire et popup de sortie promotionnel avec détection exit intent.
  * Version: 1.0.0
  * Author: PopMagique
  * Author URI: https://popmagique.com
