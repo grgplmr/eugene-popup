@@ -5,13 +5,13 @@ if (!defined('ABSPATH')) {
 ?>
 
 <div class="wrap popmagique-subscribers">
-    <h1>📧 Abonnés Newsletter - PopMagique</h1>
+    <h1><?php esc_html_e('📧 Abonnés Newsletter - PopMagique', 'popmagique'); ?></h1>
     
     <div class="popmagique-header">
         <div class="stats-summary">
             <div class="stat-item">
                 <span class="stat-number"><?php echo count($subscribers); ?></span>
-                <span class="stat-label">Total des abonnés</span>
+                <span class="stat-label"><?php esc_html_e('Total des abonnés', 'popmagique'); ?></span>
             </div>
             <div class="stat-item">
                 <span class="stat-number"><?php 
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
                     });
                     echo count($recent);
                 ?></span>
-                <span class="stat-label">Cette semaine</span>
+                <span class="stat-label"><?php esc_html_e('Cette semaine', 'popmagique'); ?></span>
             </div>
             <div class="stat-item">
                 <span class="stat-number"><?php 
@@ -29,13 +29,13 @@ if (!defined('ABSPATH')) {
                     });
                     echo count($today);
                 ?></span>
-                <span class="stat-label">Aujourd'hui</span>
+                <span class="stat-label"><?php esc_html_e("Aujourd'hui", 'popmagique'); ?></span>
             </div>
         </div>
         
         <div class="actions">
             <button type="button" class="button button-primary" id="export-subscribers">
-                📤 Exporter en CSV
+                <?php esc_html_e('📤 Exporter en CSV', 'popmagique'); ?>
             </button>
         </div>
     </div>
@@ -43,18 +43,18 @@ if (!defined('ABSPATH')) {
     <?php if (empty($subscribers)): ?>
         <div class="no-subscribers">
             <div class="no-subscribers-icon">📭</div>
-            <h2>Aucun abonné pour le moment</h2>
-            <p>Les adresses email collectées via le popup de sortie apparaîtront ici.</p>
+            <h2><?php esc_html_e('Aucun abonné pour le moment', 'popmagique'); ?></h2>
+            <p><?php esc_html_e('Les adresses email collectées via le popup de sortie apparaîtront ici.', 'popmagique'); ?></p>
         </div>
     <?php else: ?>
         <div class="subscribers-table-container">
             <table class="wp-list-table widefat fixed striped">
                 <thead>
                     <tr>
-                        <th scope="col" class="manage-column">📧 Email</th>
-                        <th scope="col" class="manage-column">📅 Date d'inscription</th>
-                        <th scope="col" class="manage-column">🌐 Adresse IP</th>
-                        <th scope="col" class="manage-column">🔧 Actions</th>
+                        <th scope="col" class="manage-column"><?php esc_html_e('📧 Email', 'popmagique'); ?></th>
+                        <th scope="col" class="manage-column"><?php esc_html_e("📅 Date d'inscription", 'popmagique'); ?></th>
+                        <th scope="col" class="manage-column"><?php esc_html_e('🌐 Adresse IP', 'popmagique'); ?></th>
+                        <th scope="col" class="manage-column"><?php esc_html_e('🔧 Actions', 'popmagique'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,7 +69,7 @@ if (!defined('ABSPATH')) {
                                 <small class="description">
                                     <?php 
                                     $diff = human_time_diff(strtotime($subscriber->date_subscribed), current_time('timestamp'));
-                                    echo sprintf('Il y a %s', $diff);
+                                    echo sprintf(esc_html__('Il y a %s', 'popmagique'), $diff);
                                     ?>
                                 </small>
                             </td>
@@ -80,7 +80,7 @@ if (!defined('ABSPATH')) {
                                 <button type="button" class="button button-small delete-subscriber" 
                                         data-id="<?php echo $subscriber->id; ?>" 
                                         data-email="<?php echo esc_attr($subscriber->email); ?>">
-                                    🗑️ Supprimer
+                                    <?php esc_html_e('🗑️ Supprimer', 'popmagique'); ?>
                                 </button>
                             </td>
                         </tr>
@@ -117,7 +117,7 @@ jQuery(document).ready(function($) {
         var id = button.data('id');
         var email = button.data('email');
         
-        if (confirm('Êtes-vous sûr de vouloir supprimer l\'abonné ' + email + ' ?')) {
+          if (confirm('<?php echo esc_js(__('Êtes-vous sûr de vouloir supprimer l\'abonné ', 'popmagique')); ?>' + email + ' ?')) {
             $.post(ajaxurl, {
                 action: 'popmagique_delete_subscriber',
                 nonce: '<?php echo wp_create_nonce('popmagique_nonce'); ?>',
@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
                         $(this).remove();
                     });
                 } else {
-                    alert('Erreur lors de la suppression : ' + response.data);
+                    alert('<?php echo esc_js(__('Erreur lors de la suppression : ', 'popmagique')); ?>' + response.data);
                 }
             });
         }

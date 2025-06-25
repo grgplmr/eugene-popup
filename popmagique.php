@@ -259,7 +259,7 @@ class PopMagique {
         check_ajax_referer('popmagique_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die('Accès non autorisé');
+            wp_die(__('Accès non autorisé', 'popmagique'));
         }
         
         $settings = $_POST['settings'];
@@ -269,7 +269,7 @@ class PopMagique {
         
         update_option('popmagique_options', $clean_settings);
         
-        wp_send_json_success('Paramètres sauvegardés avec succès !');
+        wp_send_json_success(__('Paramètres sauvegardés avec succès !', 'popmagique'));
     }
     
     /**
@@ -281,7 +281,7 @@ class PopMagique {
         $email = sanitize_email($_POST['email']);
         
         if (!is_email($email)) {
-            wp_send_json_error('Adresse email invalide');
+            wp_send_json_error(__('Adresse email invalide', 'popmagique'));
         }
         
         global $wpdb;
@@ -294,7 +294,7 @@ class PopMagique {
         ));
         
         if ($existing > 0) {
-            wp_send_json_error('Cette adresse email est déjà inscrite');
+            wp_send_json_error(__('Cette adresse email est déjà inscrite', 'popmagique'));
         }
         
         // Préparer et nettoyer les données de connexion
@@ -313,11 +313,11 @@ class PopMagique {
         );
         
         if ($result === false) {
-            wp_send_json_error('Erreur lors de l\'inscription');
+            wp_send_json_error(__('Erreur lors de l\'inscription', 'popmagique'));
         }
         
 
-        wp_send_json_success('Inscription réussie !');
+        wp_send_json_success(__('Inscription réussie !', 'popmagique'));
     }
 
     /**
@@ -327,13 +327,13 @@ class PopMagique {
         check_ajax_referer('popmagique_nonce', 'nonce');
 
         if (!current_user_can('manage_options')) {
-            wp_send_json_error('Accès non autorisé');
+            wp_send_json_error(__('Accès non autorisé', 'popmagique'));
         }
 
         $id = isset($_POST['id']) ? absint($_POST['id']) : 0;
 
         if (!$id) {
-            wp_send_json_error('ID invalide');
+            wp_send_json_error(__('ID invalide', 'popmagique'));
         }
 
         global $wpdb;
@@ -342,10 +342,10 @@ class PopMagique {
         $deleted = $wpdb->delete($table_name, array('id' => $id), array('%d'));
 
         if ($deleted === false) {
-            wp_send_json_error("Erreur lors de la suppression");
+            wp_send_json_error(__('Erreur lors de la suppression', 'popmagique'));
         }
 
-        wp_send_json_success('Abonné supprimé');
+        wp_send_json_success(__('Abonné supprimé', 'popmagique'));
     }
     
 

@@ -271,3 +271,34 @@ msgstr "Une erreur est survenue."
 
 msgid "Erreur de connexion. Veuillez réessayer."
 msgstr "Erreur de connexion. Veuillez réessayer."
+
+# New strings
+msgid "PopMagique v%s"
+msgstr "PopMagique v%s"
+
+msgid "Plugin WordPress de popups intelligents avec design glassmorphism"
+msgstr "Plugin WordPress de popups intelligents avec design glassmorphism"
+
+msgid "Êtes-vous sûr de vouloir réinitialiser tous les paramètres ?"
+msgstr "Êtes-vous sûr de vouloir réinitialiser tous les paramètres ?"
+
+msgid "Utiliser cette image"
+msgstr "Utiliser cette image"
+
+msgid "Erreur lors de la suppression"
+msgstr "Erreur lors de la suppression"
+
+msgid "Abonné supprimé"
+msgstr "Abonné supprimé"
+
+msgid "ID invalide"
+msgstr "ID invalide"
+
+msgid "Il y a %s"
+msgstr "Il y a %s"
+
+msgid "Êtes-vous sûr de vouloir supprimer l'abonné"
+msgstr "Êtes-vous sûr de vouloir supprimer l'abonné"
+
+msgid "Erreur lors de la suppression : "
+msgstr "Erreur lors de la suppression : "
