@@ -87,6 +87,7 @@ class PopMagique {
         add_action('init', array($this, 'init'));
         register_activation_hook(__FILE__, array($this, 'activate'));
         register_deactivation_hook(__FILE__, array($this, 'deactivate'));
+        register_uninstall_hook(__FILE__, 'popmagique_uninstall');
     }
     
     /**
@@ -388,3 +389,10 @@ class PopMagique {
 
 // Initialiser le plugin
 PopMagique::get_instance();
+
+/**
+ * Callback for plugin uninstall.
+ */
+function popmagique_uninstall() {
+    include plugin_dir_path(__FILE__) . 'uninstall.php';
+}
