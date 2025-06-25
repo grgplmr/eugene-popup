@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+    // Initialiser le sélecteur de couleur
+    $('.color-picker').wpColorPicker();
     // Gestion des onglets
     $('.nav-tab').on('click', function(e) {
         e.preventDefault();

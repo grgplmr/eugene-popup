@@ -197,8 +197,9 @@ class PopMagique {
      * Initialisation de l'administration
      */
     public function admin_init() {
+        wp_enqueue_style('wp-color-picker');
         wp_enqueue_style('popmagique-admin', POPMAGIQUE_PLUGIN_URL . 'assets/admin.css', array(), POPMAGIQUE_VERSION);
-        wp_enqueue_script('popmagique-admin', POPMAGIQUE_PLUGIN_URL . 'assets/admin.js', array('jquery'), POPMAGIQUE_VERSION, true);
+        wp_enqueue_script('popmagique-admin', POPMAGIQUE_PLUGIN_URL . 'assets/admin.js', array('jquery', 'wp-color-picker'), POPMAGIQUE_VERSION, true);
         
         wp_localize_script('popmagique-admin', 'popmagique_ajax', array(
             'ajax_url' => admin_url('admin-ajax.php'),
