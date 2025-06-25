@@ -25,4 +25,24 @@ jQuery(function($) {
         $(this).closest('.popmagique-popup').fadeOut();
     });
 
+    $('.popmagique-subscribe-form').on('submit', function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var email = form.find('input[name="email"]').val();
+
+        $.post(popmagique_config.ajax_url, {
+            action: 'popmagique_subscribe_email',
+            nonce: popmagique_config.nonce,
+            email: email
+        }, function(response) {
+            var message = form.next('.popmagique-response');
+            if (response.success) {
+                form.hide();
+                message.text(response.data).show();
+            } else {
+                message.text(response.data).show();
+            }
+        });
+    });
+
 });

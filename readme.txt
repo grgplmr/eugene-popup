@@ -26,6 +26,7 @@ Système de double popup intelligent avec design glassmorphism pour WordPress. P
 * **Configuration Intuitive** - Panneau d'administration simple et complet
 * **Intégration Mailchimp** - Synchronisation automatique avec vos listes
 * **Base de Données Locale** - Stockage des emails directement dans WordPress
+* **Formulaire d'inscription** - Le popup de sortie envoie l'email via AJAX
 * **Export CSV** - Exportez vos abonnés facilement
 * **Personnalisation Complète** - Couleurs, polices (graisse, style, transformation), textes et délais configurables
 
