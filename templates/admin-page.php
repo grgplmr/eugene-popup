@@ -76,7 +76,7 @@ if (!defined('ABSPATH')) {
                         <tr>
                             <th scope="row">Couleur de fond</th>
                             <td>
-                                <input type="text" name="entry_popup[background_color]" value="<?php echo esc_attr($options['entry_popup']['background_color']); ?>" class="regular-text">
+                                <input type="text" name="entry_popup[background_color]" value="<?php echo esc_attr($options['entry_popup']['background_color']); ?>" class="regular-text color-picker">
                                 <p class="description">Format RGBA recommandé : rgba(255, 255, 255, 0.1)</p>
                             </td>
                         </tr>
@@ -208,7 +208,7 @@ if (!defined('ABSPATH')) {
                         <tr>
                             <th scope="row">Couleur de fond</th>
                             <td>
-                                <input type="text" name="exit_popup[background_color]" value="<?php echo esc_attr($options['exit_popup']['background_color']); ?>" class="regular-text">
+                                <input type="text" name="exit_popup[background_color]" value="<?php echo esc_attr($options['exit_popup']['background_color']); ?>" class="regular-text color-picker">
                                 <p class="description">Format RGBA recommandé : rgba(255, 255, 255, 0.1)</p>
                             </td>
                         </tr>
