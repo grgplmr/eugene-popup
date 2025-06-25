@@ -71,15 +71,13 @@ if (!defined('ABSPATH')) {
                     <?php echo wp_kses_post($options['exit_popup']['content']); ?>
                 </p>
 
-                <form class="popmagique-form popmagique-subscribe-form" action="#">
-                    <input type="email" name="email" placeholder="Votre email" required>
-                    <button type="submit"
-                            class="popmagique-button popmagique-button-primary"
-                            style="background-color: <?php echo esc_attr($options['exit_popup']['button_color']); ?>;">
+                <div class="popmagique-actions">
+                    <a href="<?php echo esc_url($options['exit_popup']['button_url']); ?>"
+                       class="popmagique-button popmagique-button-primary"
+                       style="background-color: <?php echo esc_attr($options['exit_popup']['button_color']); ?>;">
                         <?php echo esc_html($options['exit_popup']['button_text']); ?>
-                    </button>
-                </form>
-                <div class="popmagique-response" style="display:none;"></div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
