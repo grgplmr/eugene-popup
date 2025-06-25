@@ -71,25 +71,6 @@ if (!defined('ABSPATH')) {
                                 <p class="description">Image optionnelle à afficher dans le popup</p>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">Texte du bouton</th>
-                            <td>
-                                <input type="text" name="entry_popup[button_text]" value="<?php echo esc_attr($options['entry_popup']['button_text']); ?>" class="regular-text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">URL du bouton</th>
-                            <td>
-                                <input type="url" name="entry_popup[button_url]" value="<?php echo esc_attr($options['entry_popup']['button_url']); ?>" class="regular-text">
-                                <p class="description">URL vers laquelle le bouton redirige</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Couleur du bouton</th>
-                            <td>
-                                <input type="color" name="entry_popup[button_color]" value="<?php echo esc_attr($options['entry_popup']['button_color']); ?>">
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -109,6 +90,16 @@ if (!defined('ABSPATH')) {
                             <th scope="row">Couleur du texte</th>
                             <td>
                                 <input type="color" name="entry_popup[text_color]" value="<?php echo esc_attr($options['entry_popup']['text_color']); ?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Alignement du texte</th>
+                            <td>
+                                <select name="entry_popup[text_align]">
+                                    <option value="left" <?php selected($options['entry_popup']['text_align'], 'left'); ?>>Gauche</option>
+                                    <option value="center" <?php selected($options['entry_popup']['text_align'], 'center'); ?>>Centre</option>
+                                    <option value="right" <?php selected($options['entry_popup']['text_align'], 'right'); ?>>Droite</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
@@ -198,6 +189,25 @@ if (!defined('ABSPATH')) {
                                 <textarea name="exit_popup[content]" rows="4" class="large-text"><?php echo esc_textarea($options['exit_popup']['content']); ?></textarea>
                             </td>
                         </tr>
+                        <tr>
+                            <th scope="row">Texte du bouton</th>
+                            <td>
+                                <input type="text" name="exit_popup[button_text]" value="<?php echo esc_attr($options['exit_popup']['button_text']); ?>" class="regular-text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">URL du bouton</th>
+                            <td>
+                                <input type="url" name="exit_popup[button_url]" value="<?php echo esc_attr($options['exit_popup']['button_url']); ?>" class="regular-text">
+                                <p class="description">URL vers laquelle le bouton redirige</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Couleur du bouton</th>
+                            <td>
+                                <input type="color" name="exit_popup[button_color]" value="<?php echo esc_attr($options['exit_popup']['button_color']); ?>">
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -218,6 +228,16 @@ if (!defined('ABSPATH')) {
                             <th scope="row">Couleur du texte</th>
                             <td>
                                 <input type="color" name="exit_popup[text_color]" value="<?php echo esc_attr($options['exit_popup']['text_color']); ?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Alignement du texte</th>
+                            <td>
+                                <select name="exit_popup[text_align]">
+                                    <option value="left" <?php selected($options['exit_popup']['text_align'], 'left'); ?>>Gauche</option>
+                                    <option value="center" <?php selected($options['exit_popup']['text_align'], 'center'); ?>>Centre</option>
+                                    <option value="right" <?php selected($options['exit_popup']['text_align'], 'right'); ?>>Droite</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
