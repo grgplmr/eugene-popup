@@ -292,13 +292,17 @@ class PopMagique {
             wp_send_json_error('Cette adresse email est déjà inscrite');
         }
         
+        // Préparer et nettoyer les données de connexion
+        $ip_address  = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
+        $user_agent  = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])) : '';
+
         // Insérer le nouvel abonné
         $result = $wpdb->insert(
             $table_name,
             array(
-                'email' => $email,
-                'ip_address' => $_SERVER['REMOTE_ADDR'],
-                'user_agent' => $_SERVER['HTTP_USER_AGENT']
+                'email'      => $email,
+                'ip_address' => $ip_address,
+                'user_agent' => $user_agent
             ),
             array('%s', '%s', '%s')
         );
